@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Post" ADD COLUMN     "rating" TEXT NOT NULL DEFAULT 'MATURE';
