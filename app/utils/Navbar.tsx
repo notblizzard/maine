@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <>
       {user && (
-        <div className="flex flex-row bg-slate-800/60 backdrop-filter backdrop-blur-sm  text-black p-4 justify-end items-center w-full sticky top-0">
+        <div className="z-10 flex flex-row bg-slate-800/60 backdrop-filter backdrop-blur-sm  text-black p-4 justify-end items-center w-full absolute top-0">
           <Input
             className="w-2/6 mx-10"
             placeholder="Search"
