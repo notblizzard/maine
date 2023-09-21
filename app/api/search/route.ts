@@ -35,6 +35,31 @@ export async function GET(request: Request, response: Response) {
             in: ["MATURE", "EXPLICIT"],
           },
         },
+        OR: [
+          {
+            title: {
+              contains: search,
+              mode: "insensitive",
+            },
+          },
+          {
+            description: {
+              contains: search,
+              mode: "insensitive",
+            },
+          },
+          {
+            tags: {
+              some: {
+                tag: {
+                  name: {
+                    in: search.split(" "),
+                  },
+                },
+              },
+            },
+          },
+        ],
       },
       include: {
         tags: {
